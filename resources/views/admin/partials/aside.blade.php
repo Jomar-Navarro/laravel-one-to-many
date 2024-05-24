@@ -37,6 +37,13 @@
                         <span>Type</span>
                     </a>
                 </li>
+
+                <li>
+                    <a class="d-flex" href="{{ route('admin.technology_projects') }}">
+                        <div class="me-2"><i class="fa-solid fa-bars-staggered"></i></div>
+                        <span>List Technology & Project</span>
+                    </a>
+                </li>
             </div>
 
         </ul>
