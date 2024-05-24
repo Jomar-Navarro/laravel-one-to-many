@@ -61,6 +61,18 @@
             </div>
         </div>
 
+        <div class="mb-3 m-3">
+            <label for="technology" class="form-label fw-bold">Technology</label>
+            <select name="technology_id" class="form-select" aria-label="Default select example">
+                <option value="" selected>Select a Technology</option>
+                @foreach ($technology as $item)
+                    <option
+                      value="{{ $item->id }}"
+                      @if (old('technology_id') == $item->id) selected @endif>{{ $item->title }}</option>
+                @endforeach
+            </select>
+        </div>
+
         <div class="row">
             <div class="col">
                 <div class="mb-3 m-3">

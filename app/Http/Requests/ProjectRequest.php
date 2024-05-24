@@ -37,9 +37,9 @@ class ProjectRequest extends FormRequest
             'description.required' => 'La descrizione del progetto è obbligatoria.',
             'project_url.required' => 'L\'URL del progetto è obbligatorio.',
             'project_url.url' => 'L\'URL del progetto deve essere un URL valido.',
-            'image.image' => 'L\'immagine deve essere un file immagine.',
-            'image.mimes' => 'L\'immagine deve essere di uno dei seguenti formati: jpeg, png, jpg, gif.',
-            'image.max' => 'L\'immagine non può superare i 2 MB di dimensioni.',
+            // 'image.image' => 'L\'immagine deve essere un file immagine.',
+            // 'image.mimes' => 'L\'immagine deve essere di uno dei seguenti formati: jpeg, png, jpg, gif.',
+            // 'image.max' => 'L\'immagine non può superare i 2 MB di dimensioni.',
         ];
     }
 }

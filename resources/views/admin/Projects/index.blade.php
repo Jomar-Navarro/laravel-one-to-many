@@ -19,7 +19,7 @@
         @forelse ($projects as $project)
         <tr>
             <td>{{ $project->title }}</td>
-            <td>{{ $project->technology->title }}</td>
+            <td>{{ $project->technology?->title }}</td>
             <td>{{ $project->description }}</td>
             <td><a href="{{ $project->project_url }}" target="_blank">{{ $project->project_url }}</a></td>
             <td><img src="{{ asset($project->image) }}" alt=""></td>

@@ -5,6 +5,8 @@
 <div class="container my-3 p-5 bg-dark-subtle rounded-5">
     <h1 class="text-center fw-bold">{{ $project->title }}</h1>
 
+    <p>Technology: <span class="badge text-bg-success">{{ $project->technology?->title }}</span></p>
+
     <div class="row my-3 d-flex">
         <div class="col col-4">
             <img class="object-fit-contain img-fluid" src="{{ $project->image }}" alt="{{ $project->title }}">
