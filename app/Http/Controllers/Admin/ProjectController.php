@@ -48,17 +48,16 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        dd($project);
 
-
+        return view('admin.Projects.show', compact('project'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
-        //
+        return view('admin.Projects.edit', compact('project'));
     }
 
     /**

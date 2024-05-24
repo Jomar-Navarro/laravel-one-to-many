@@ -9,6 +9,10 @@ class Project extends Model
 {
     use HasFactory;
 
+    public function Technology(){
+        return $this-> belongsTo(Technology::class);
+    }
+
     protected $fillable = [
         'title',
         'slug',
