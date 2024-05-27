@@ -44,7 +44,8 @@
                     <label for="image" class="form-label fw-bold">Image</label>
                     <input
                       name="image"
-                      type="text"
+                      type="file"
+                      onchange="showImage(event)"
                       class="form-control"
                       @error('image')
                             is-invalid
@@ -58,6 +59,7 @@
                         </small>
                     @enderror
                 </div>
+                <img class="thumb" id="thumb" src="/img/imagenotfound.jpg" alt="imagenotfound">
             </div>
         </div>
 
@@ -138,7 +140,7 @@
         </div>
 
         <div>
-            <button class="btn btn-success" type="submit">Add New Project</button>
+            <button class="btn btn-success" type="submit">Edit Project</button>
         </div>
 </div>
 
@@ -153,3 +155,11 @@
 My Comics
 
 @endsection
+
+
+<script>
+    function showImage(event){
+        const thumb = document.getElementById('thumb')
+        thumb.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>

@@ -25,7 +25,7 @@ class ProjectRequest extends FormRequest
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'project_url' => 'nullable|url',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:20480',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 
