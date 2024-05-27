@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col col-6">
                 <div class="mb-3 m-3">
-                    <label for="title" class="form-label  fw-bold">title</label>
+                    <label for="title" class="form-label  fw-bold">Title</label>
                     <input
                         name="title"
                         type="text"
@@ -44,8 +44,9 @@
                     <label for="image" class="form-label fw-bold">Image</label>
                     <input
                       name="image"
-                      type="text"
+                      type="file"
                       class="form-control"
+                      onchange="showImage(event)"
                       @error('image')
                             is-invalid
                         @enderror
@@ -58,6 +59,7 @@
                         </small>
                     @enderror
                 </div>
+                <img class="thumb" id="thumb" src="/img/imagenotfound.jpg" alt="imagenotfound">
             </div>
         </div>
 
@@ -167,3 +169,10 @@
 My Comics
 
 @endsection
+
+<script>
+    function showImage(event){
+        const thumb = document.getElementById('thumb')
+        thumb.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>

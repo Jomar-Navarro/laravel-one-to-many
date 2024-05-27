@@ -14,7 +14,7 @@
 
     <div class="main-wrapper d-flex">
         @include('admin.partials.aside')
-        <div class="content p-5">
+        <div class="content p-5 bg-secondary bg-gradient">
             @yield('content')
         </div>
     </div>

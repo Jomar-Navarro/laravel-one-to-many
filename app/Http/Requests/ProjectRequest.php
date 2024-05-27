@@ -24,22 +24,21 @@ class ProjectRequest extends FormRequest
         return [
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'project_url' => 'required|url',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'project_url' => 'nullable|url',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:20480',
         ];
     }
 
     public function messages()
     {
         return [
-            'title.required' => 'Il titolo del progetto è obbligatorio.',
-            'title.max' => 'Il titolo del progetto non può superare i 255 caratteri.',
-            'description.required' => 'La descrizione del progetto è obbligatoria.',
-            'project_url.required' => 'L\'URL del progetto è obbligatorio.',
+            'title.required' => 'The project title is required.',
+            'title.max' => 'The project title can\'t have more 255 character.',
+            'description.required' => 'The project description is required',
             'project_url.url' => 'L\'URL del progetto deve essere un URL valido.',
-            // 'image.image' => 'L\'immagine deve essere un file immagine.',
-            // 'image.mimes' => 'L\'immagine deve essere di uno dei seguenti formati: jpeg, png, jpg, gif.',
-            // 'image.max' => 'L\'immagine non può superare i 2 MB di dimensioni.',
+            'image.image' => 'L\'immagine deve essere un file immagine.',
+            'image.mimes' => 'L\'immagine deve essere di uno dei seguenti formati: jpeg, png, jpg, gif.',
+            'image.max' => 'L\'immagine non può superare i 2 MB di dimensioni.',
         ];
     }
 }
